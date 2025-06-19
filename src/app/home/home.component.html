@@ -1,0 +1,31 @@
+<div class="w-full bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 p-6 shadow-lg">
+  <input
+    type="text"
+    placeholder="Procure um filme... Star Wars, Matrix..."
+    class="bg-gray-700 text-gray-100 placeholder-gray-400 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:bg-gray-600 transition"
+    [formControl]="searchControl"
+  />
+</div>
+
+<div class="max-w-7xl mx-auto px-6 py-6">
+  <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    <li
+      *ngFor="let filme of filmes"
+      class="bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 overflow-hidden border border-gray-700"
+    >
+      <div class="w-full aspect-[2/3] bg-gray-700">
+        <img
+          *ngIf="filme.poster_path"
+          [src]="carregarImagem(filme.poster_path)"
+          alt="{{ filme.title }}"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-gray-100 mb-2 line-clamp-2">{{ filme.title }}</h3>
+        <p class="text-sm text-yellow-400"><strong>Nota:</strong> {{ filme.vote_average }}</p>
+        <p class="text-xs text-gray-400">{{ filme.release_date }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
