@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 
   filmes: any[] = [];
   searchControl = new FormControl('');
+  selectedFilme: any = null;
 
   ngOnInit(): void {
     this.filmesService.getFilmesPopular().subscribe((dados) => {
@@ -39,5 +40,13 @@ export class HomeComponent implements OnInit {
   carregarImagem(path: string): string {
     return `https://image.tmdb.org/t/p/w500${path}`;
   }
+
+  abrirModal(filme: any) {
+  this.selectedFilme = filme;
+}
+
+fecharModal() {
+  this.selectedFilme = null;
+}
 
 }

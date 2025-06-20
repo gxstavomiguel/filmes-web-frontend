@@ -12,7 +12,8 @@
     <li
       *ngFor="let filme of filmes"
       class="bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 overflow-hidden border border-gray-700"
-    >
+      (click)="abrirModal(filme)"
+      >
       <div class="w-full aspect-[2/3] bg-gray-700">
         <img
           *ngIf="filme.poster_path"
@@ -29,3 +30,36 @@
     </li>
   </ul>
 </div>
+
+<div
+  *ngIf="selectedFilme"
+  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+>
+  <div class="bg-gray-900 text-gray-100 rounded-lg shadow-2xl max-w-3xl w-full mx-4 relative">
+    <button
+      (click)="fecharModal()"
+      class="absolute top-0 right-2 text-gray-400 hover:text-white text-xl font-bold"
+    >
+      ×
+    </button>
+
+    <div class="flex flex-col md:flex-row">
+      <div class="md:w-1/3">
+        <img
+          *ngIf="selectedFilme.poster_path"
+          [src]="carregarImagem(selectedFilme.poster_path)"
+          alt="{{ selectedFilme.title }}"
+          class="w-full h-full object-cover rounded-l-lg"
+        />
+      </div>
+
+      <div class="p-6 md:w-2/3">
+        <h2 class="text-2xl font-bold mb-2">{{ selectedFilme.title }}</h2>
+        <p class="text-yellow-400 mb-2"><strong>Nota:</strong> {{ selectedFilme.vote_average }}</p>
+        <p class="text-gray-400 mb-2"><strong>Lançamento:</strong> {{ selectedFilme.release_date }}</p>
+        <p class="mt-4 text-gray-300">{{ selectedFilme.overview }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
