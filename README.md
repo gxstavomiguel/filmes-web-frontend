@@ -1,5 +1,5 @@
 # Interface Web de Filmes
-Esta é uma **Interface Web** desenvolvido com **Angular**, **Tailwind CSS**, **TypeScript** que consome uma API pública.
+Esta é uma **Interface Web** desenvolvida com **Angular**, **Tailwind CSS** e **TypeScript**, que consome uma API pública de filmes.
 
 ![Filmes Web 1](public/filmesweb1.png)
 
@@ -13,7 +13,7 @@ Esta é uma **Interface Web** desenvolvido com **Angular**, **Tailwind CSS**, **
 ## Funcionalidades
 
 -   ✅ Visualizar informações sobre filmes
--   ✅ Pesquisar por filmes específico
+-   ✅ Pesquisar por filmes específicos
 
 ![Filmes Web 2](public/filmesweb2.png)
 
