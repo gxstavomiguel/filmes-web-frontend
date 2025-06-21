@@ -1,59 +1,39 @@
-# Filmesweb
+# Interface Web de Filmes
+Esta é uma **Interface Web** desenvolvido com **Angular**, **Tailwind CSS**, **TypeScript** que consome uma API pública.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+![Filmes Web 1](public/filmesweb1.png)
 
-## Development server
+## Tecnologias Utilizadas
+-   **Angular** 
+    
+-   **Tailwind CSS**
+    
+-   **TypeScript**
 
-To start a local development server, run:
+## Funcionalidades
 
-```bash
-ng serve
-```
+-   ✅ Visualizar informações sobre filmes
+-   ✅ Pesquisar por filmes específico
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![Filmes Web 2](public/filmesweb2.png)
 
-## Code scaffolding
+## Como Rodar 
+### Pré-requisitos:
+-   Node.js 
+-   Angular CLI  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/gxstavomiguel/filmes-web-frontend
+2. **Abra o projeto no Visual Studio Code.**
 
-```bash
-ng generate component component-name
-```
+3. **Rode o servidor:**
+``
+	ng serve
+   ``
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+4. **Inicie o projeto.**
+   ```bash 
+   A aplicação estará disponível em: http://localhost:4200
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
