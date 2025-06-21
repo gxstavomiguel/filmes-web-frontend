@@ -1,5 +1,6 @@
 # Interface Web de Filmes
 Esta é uma **Interface Web** desenvolvida com **Angular**, **Tailwind CSS** e **TypeScript**, que consome uma API pública de filmes.
+Link do repositório do [Backend](https://github.com/gxstavomiguel/filmes-web-backend).
 
 ![Filmes Web 1](public/filmesweb1.png)
 
